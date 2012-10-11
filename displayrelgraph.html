@@ -1,0 +1,90 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <style type="text/css"> 
+	circle.node {
+	  stroke: #fff;
+	  stroke-width: 1.5px;
+	}
+	
+	line.link {
+	  stroke: #999;
+	  stroke-opacity: .6;
+	}
+  </style>
+	
+	<table border="0" width="80%">
+		<tr>
+			<td width="23%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the type of relationship pattern:</span></td>
+			<td width="20%">
+				<select id="typeofrelationship" name="D2"  style='font:bold 13px serif;'>
+					<option value="" >--Select--</option>
+					<option value="@self">My Team</option>
+					<option value="@selected">Adjacent Teams</option>
+					<option value="@all">All Team</option>
+				</select></td>
+			<td width="3%" rowspan="2">&nbsp;</td>
+
+			<td rowspan="2">
+			<table border="0" width="100%" style="display:none" id="grouptable">
+				<tr>
+					<td width="35%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the Group:</span></td>
+					<td width="50%" rowspan="2">
+						<select id="selectgroup"  name="D1" style='font:bold 13px serif;'>
+				 
+					</select><p>&nbsp;</td>
+				</tr>
+				<tr>
+					<td >&nbsp;</td>
+				</tr>
+			</table>
+			</td>
+
+		</tr>
+		<tr>
+			<td width="450" colspan="2">&nbsp;</td>
+
+		</tr>
+		<tr>
+			<td width="414" colspan="2">
+			<p align="right">
+			<input type="button" value="Display Graph" name="displaygraph" id="displaygraph" style="font:bold 13px serif;"></td>
+			<td width="414" colspan="2">
+			<p align="left">
+			<input type="button" value="Get Data" name="getdata" id="getdata" style="font:bold 13px serif;"></td>
+
+		</tr>
+		</table>
+
+		<br>
+		<br>
+		<div id="chart"></div>
+		<div id="graphdata"  style="display:none">
+			
+			<table border="0" width="37%">
+			<tr>
+				<td width="214"><input type="button" value="Select Users" name="fromnode" id="fromnode" style="font:bold 13px serif;"></td>
+				<td width="183">
+				<p align="left"><input type="button" value="Select Users" name="tonode" id="tonode" style="font:bold 13px serif;"></td>
+			</tr>
+			<tr>
+				<td width="214">
+					  <table border="1">
+    						<tbody id="user-from-content">
+    						</tbody>
+					  </table>
+
+				</td>
+				<td width="183">
+					  <table border="1">
+    						<tbody id="user-to-content">
+    						</tbody>
+					  </table>
+				</td>
+			</tr>
+			</table>
+		</div>
+<script type="text/javascript" >
+	gadgets.window.adjustHeight();
+	
+</script>
